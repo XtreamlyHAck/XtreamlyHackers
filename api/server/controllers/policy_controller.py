@@ -7,3 +7,8 @@ router = APIRouter()
 @router.get("/policy")
 async def policy():
     return PolicyService().policy()
+
+
+@router.get("/volatility")
+async def policy():
+    return PolicyService().predict()
