@@ -10,7 +10,7 @@ function Layout() {
   return (
       <div className="layout">
         <Header/>
-        <Container py={10} size="xl">
+        <Container py={10}>
           <Outlet/>
         </Container>
       </div>

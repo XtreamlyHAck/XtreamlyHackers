@@ -7,15 +7,13 @@ import {IconReload} from "@tabler/icons-react";
 
 function UITransaction({transaction}: {transaction: Transaction}) {
     const {
-        type,
-        asset,
         risk,
+        title
     } = transaction.vault
 
     return (
         <Table.Tr>
-            <Table.Td>{type}</Table.Td>
-            <Table.Td>{asset}</Table.Td>
+            <Table.Td>{title}</Table.Td>
             <Table.Td>{risk}</Table.Td>
             <Table.Td>
                 <Stack gap={1} ta="right">
@@ -58,7 +56,6 @@ function TransactionsTable() {
             <Table.Thead>
                 <Table.Tr fs="30px">
                     <Table.Th>Vault</Table.Th>
-                    <Table.Th>Asset</Table.Th>
                     <Table.Th>Risk</Table.Th>
                     <Table.Th ta='right'>Amount ($)</Table.Th>
                 </Table.Tr>

@@ -46,6 +46,14 @@ export default function VaultCard(
         },
     });
 
+    let riskColor = 'red';
+    if (vault.risk === 'low') {
+        riskColor = 'green';
+    }
+    if (vault.risk === 'med') {
+        riskColor = 'orange';
+    }
+
     return (
         <Card
             shadow="sm"
@@ -57,7 +65,7 @@ export default function VaultCard(
             <Stack>
                 <Stack gap={0}>
                     <Title ta="center">{vault.title}</Title>
-                    <Text ta="center" c="gray">{vault.riskDescription}</Text>
+                    <Text ta="center" c={riskColor}>{vault.riskDescription}</Text>
                 </Stack>
                 {
                     loading &&
@@ -79,7 +87,9 @@ export default function VaultCard(
                 <form onSubmit={form.onSubmit(handleSubmit)}>
                     <Stack gap={20}>
                         <NumberInput
-                            label="Amount ($)" size="md"
+                            label="Amount ($)"
+                            size="lg"
+                            radius="lg"
                             required
                             key={form.key('amount')}
                             {...form.getInputProps('amount')}

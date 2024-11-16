@@ -1,5 +1,5 @@
 export interface VaultType {
-    type: 'long' | 'short';
+    type: string;
     risk: 'low' | 'med' | 'high';
     apy: number;
     asset: string;
@@ -7,7 +7,7 @@ export interface VaultType {
 }
 
 export class Vault {
-    type!: 'long' | 'short';
+    type!: string;
     risk!: 'low' | 'med' | 'high';
     apy!: number;
     asset!: string;
@@ -23,7 +23,7 @@ export class Vault {
 
     get title(): string {
         const t = this.type.charAt(0).toUpperCase() + this.type.slice(1);
-        return `${t} ${this.asset} Vault`;
+        return t.replace("{asset}", this.asset);
     }
 
     get apyPerc(): string {
@@ -31,6 +31,6 @@ export class Vault {
     }
 
     get riskDescription(): string {
-        return `${this.risk} (${this.apyPerc})`;
+        return `${this.risk} risk (${this.apyPerc})`;
     }
 }
