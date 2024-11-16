@@ -13,6 +13,8 @@ data/**
 
 # except their sub-folders
 !data/**/
+!data/08_reporting/**/*
+!data/06_models/**/*
 
 # also keep all .gitkeep files
 !.gitkeep
