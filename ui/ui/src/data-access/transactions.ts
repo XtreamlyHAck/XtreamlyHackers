@@ -9,7 +9,7 @@ import {ethers} from "ethers";
 import {rpc} from '../utils/wallet'
 
 const baseUrl = "https://api-sepolia.arbiscan.io/api"
-const apiKey = 'UEJA5VG3FMJN75ATC2YFV6V26AUD5GPSHH'
+const apiKey = '...'
 
 const blockscoutBaseUrl = "https://arbitrum-sepolia.blockscout.com/api/v2"
 
