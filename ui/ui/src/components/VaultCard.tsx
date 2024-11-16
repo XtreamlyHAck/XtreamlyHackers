@@ -7,6 +7,7 @@ import {useState} from "react";
 import {Vault} from "../data/vault";
 import {useVault} from "../data-access/vaults.ts";
 import Earning from "./Earning.tsx";
+import Notification from "./Notification.tsx";
 
 // One contract per vault
 
@@ -95,6 +96,7 @@ export default function VaultCard(
                             {...form.getInputProps('amount')}
                         />
                         <Group justify="right">
+                            <Notification/>
                             <Button
                                 size="md"
                                 leftSection={<IconPlus/>}
