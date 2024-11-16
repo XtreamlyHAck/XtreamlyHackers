@@ -6,4 +6,9 @@ kedro-viz>=6.7.0
 kedro[jupyter]
 notebook
 scikit-learn~=1.5.1
+xgboost==2.1.2
 setuptools; python_version >= "3.12"
+pyspark==3.5.3
+google-cloud-bigquery==3.25.0
+google-cloud-bigquery-storage==2.26.0
+google-cloud-storage==2.18.2

@@ -1,0 +1,17 @@
+uniswap_v3_raw:
+  type: ai.datasets.SparkBigQueryTableDataset
+  project_id: xtreamly-ai
+  table: chainbase.chainbase_ethereum_uniswap_v3
+  mode: append
+
+uniswap_v3_trader_raw:
+  type: ai.datasets.SparkBigQueryTableDataset
+  project_id: xtreamly-ai
+  table: chainbase.chainbase_ethereum_uniswap_v3_trader
+  mode: append
+
+uniswap_v3_prepared:
+  type: ai.datasets.SparkBigQueryTableDataset
+  project_id: xtreamly-ai
+  table: xtreamly_prepared.v11-x-uniswap_v3_trader
+  mode: overwrite
