@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamer
+  namespace: xtreamly-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamer
+  template:
+    metadata:
+      labels:
+        app: streamer
+    spec:
+      containers:
+        - name: stream
+          image: 893048150390.dkr.ecr.eu-central-1.amazonaws.com/xtreamly-api/streamer:latest
+          env:
+            - name: 'SHARED_DATA_PATH'
+              value: '/mnt/shared'
+          envFrom:
+            - secretRef:
+                name: fastapi-secret
+          resources:
+            requests:
+              cpu: "2000m"
+              memory: "4000Mi"
+            limits:
+              cpu: "2000m"
+              memory: "4000Mi"
+          volumeMounts:
+            - name: efs-volume
+              mountPath: /mnt/shared
+      volumes:
+        - name: efs-volume
+          persistentVolumeClaim:
+            claimName: inference-data-claim
