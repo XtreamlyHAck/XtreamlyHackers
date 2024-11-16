@@ -44,6 +44,7 @@ function mapTransaction(transaction: any): Transaction | null {
     };
 }
 
+// DEPRECATED !!! USE BLOCKSCOUT !!!
 export function useTransactionsEtherscan() {
     const {address} = useAccount()
 
