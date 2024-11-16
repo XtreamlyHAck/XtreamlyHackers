@@ -1,0 +1,24 @@
+{
+  "name": "xtreamly-ui",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "functions",
+    "ui"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./node_modules ./ui/node_modules ./functions/node_modules",
+    "build:functions": "yarn workspace functions run build",
+    "build:ui": "yarn workspace ui run build",
+    "build": "yarn build:ui && yarn build:functions",
+    "start:ui": "yarn workspace ui run start",
+    "start:functions": "concurrently \"yarn workspace functions run build:watch\" \"firebase emulators:start\"",
+    "start": "concurrently \"yarn start:functions\" \"yarn start:ui\""
+  },
+  "dependencies": {
+    "firebase-tools": "^13.13.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
