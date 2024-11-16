@@ -1,5 +1,6 @@
 from pyspark.sql import functions as F
-from pyspark.sql.functions import col, from_unixtime
+from pyspark.sql.functions import from_unixtime
+from pyspark.sql import DataFrame
 
 
 def prepare_training_data(df: DataFrame):

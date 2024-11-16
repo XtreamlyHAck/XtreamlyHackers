@@ -1,8 +1,14 @@
 # You can define spark specific configuration here.
 
 spark.driver.maxResultSize: 3g
-spark.hadoop.fs.s3a.impl: org.apache.hadoop.fs.s3a.S3AFileSystem
 spark.sql.execution.arrow.pyspark.enabled: true
+spark.hadoop.fs.s3a.impl: org.apache.hadoop.fs.s3a.S3AFileSystem
+spark.jars.packages: org.apache.hadoop:hadoop-aws:3.3.2,com.google.cloud.spark:spark-bigquery-with-dependencies_2.12:0.41.0
+spark.jars: https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-hadoop3-2.2.22.jar
+spark.hadoop.fs.AbstractFileSystem.gs.impl: com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS
+spark.hadoop.fs.gs.impl: com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem
+temporaryGcsBucket: xtreamly-data-platform-us
+spark.sql.sources.partitionOverwriteMode: DYNAMIC
 
 # https://docs.kedro.org/en/stable/integrations/pyspark_integration.html#tips-for-maximising-concurrency-using-threadrunner
 spark.scheduler.mode: FAIR
