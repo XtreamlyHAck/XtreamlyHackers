@@ -1,76 +1,87 @@
-## Flare Hardhat Starter Kit
+# Xtreamly AI Vaults
 
-**IMPORTANT!!**
-The supporting library uses Openzeppelin version `4.9.3`, be careful to use the documentation and examples from that library version.
+Xtreamly AI Vaults is a decentralized finance (DeFi) platform leveraging artificial intelligence (AI) to optimize asset management and yield strategies in a decentralized vault system. Our smart contracts enable secure, automated, and data-driven  services that maximize returns for users with minimal risk.
 
-### Getting started
+## Overview
 
-If you are new to Hardhat please check the [Hardhat getting started doc](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
+Xtreamly AI Vaults combines DeFi protocols with AI algorithms to offer:
 
-1. Clone and install dependencies:
+- **Smart Vaults**: AI-driven vaults that dynamically manage assets and optimize yield based on market conditions.
+- **Automated Strategies**: Pre-built, auto-executing strategies for yield generation.
+- **Security and Transparency**: ...
+- **...**: ...
 
-   ```console
-   git clone https://github.com/flare-foundation/flare-hardhat-starter.git
-   cd flare-hardhat-starter
-   ```
 
-   and then run:
+## Features
 
-   ```console
-   yarn
-   ```
+1. **AI-Enhanced Yield Strategies**
+   - Adaptive strategies using machine learning to analyze market data and trends.
+   - Real-time asset reallocation based on predictive models.
 
-   or
+2. **Vault System**
+   - Multiple vaults with distinct risk-return profiles.
+   - Flexible deposit and withdrawal options.
 
-   ```console
-   npm install
-   ```
+3. **Automated Rebalancing**
+   - AI-powered portfolio rebalancing to minimize risk and optimize returns.
 
-2. Set up `.env` file
+4. **Decentralized and Secure**
 
-   ```console
-   mv .env.example .env
-   ```
+## Getting Started
 
-3. Change the `PRIVATE_KEY` in the `.env` file to yours
+**Prerequisites**
 
-4. Compile the project
+- [Node (>= v18.18)](https://nodejs.org/en/download/)
+- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
+- [Git](https://git-scm.com/downloads)
 
-    ```console
-    yarn hardhat compile
-    ```
 
-    or
+1. 
+```
+yarn install 
+```
 
-    ```console
-    npx hardhat compile
-    ```
+2. 
 
-    This will compile all `.sol` files in your `/contracts` folder. It will also generate artifacts that will be needed for testing. Contracts `Imports.sol` import MockContracts and Flare related mocks, thus enabling mocking of the contracts from typescript.
+```
+yarn chain 
+```
 
-5. Run Tests
+3. 
 
-    ```console
-    yarn hardhat test
-    ```
+```
+yarn deploy
+```
 
-    or
 
-    ```console
-    npx hardhat test
-    ```
+## Smart Contracts
 
-6. Deploy
+The repository contains the following key smart contracts:
 
-    Check the `hardhat.config.ts` file, where you define which networks you want to interact with. Flare mainnet & test network details are already added in that file.
+- **Vault.sol** - Main contract managing user deposits and withdrawals.
+- **StrategyAI.sol** - 
+- **Governance.sol** - 
 
-    Make sure that you have added API Keys in the `.env` file
+## Documentation
 
-   ```console
-   npx hardhat run scripts/volatility.ts
-   ```
-## Resources
 
-- [Flare Developer Hub](https://dev.flare.network/)
-- [Hardhat Docs](https://hardhat.org/docs)
 
+## Roadmap
+
+- **Q3 2024**: POC for Devcon 7
+- **Q4 2024**: Enhanced security and contract audits.
+- **Q1 2025**: ....
+
+## Contributing
+
+Contributions are welcome! Please review the [Contribution Guidelines](CONTRIBUTING.md) and follow the code of conduct.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For inquiries or support, reach out via [Email](mailto:...) or join our [Website](https://xtreamly.com).
+
+---
