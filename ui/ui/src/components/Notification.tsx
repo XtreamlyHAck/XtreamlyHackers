@@ -16,8 +16,8 @@ export default function Notification() {
             loading={isLoading}
             onClick={
                 isSubscribed ?
-                () => subscribe().finally(refetch) :
-                () => unsubscribe().finally(refetch)
+                () => unsubscribe().finally(refetch):
+                () => subscribe().finally(refetch)
             }
         >
             {text}

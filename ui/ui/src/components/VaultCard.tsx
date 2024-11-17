@@ -95,24 +95,27 @@ export default function VaultCard(
                             key={form.key('amount')}
                             {...form.getInputProps('amount')}
                         />
-                        <Group justify="right">
+                        <Group justify="space-between">
+                            <Group justify="right">
+                                <Button
+                                    size="md"
+                                    leftSection={<IconPlus/>}
+                                    type="submit"
+                                    onClick={() => !isConnected ? open() : setAction('deposit')}
+                                >
+                                    Deposit
+                                </Button>
+                                <Button
+                                    size="md"
+                                    leftSection={<IconMinus/>}
+                                    type="submit"
+                                    onClick={() => !isConnected ? open() : setAction('withdraw')}
+                                >
+                                    Withdraw
+                                </Button>
+                            </Group>
                             <Notification/>
-                            <Button
-                                size="md"
-                                leftSection={<IconPlus/>}
-                                type="submit"
-                                onClick={() => !isConnected ? open() : setAction('deposit')}
-                            >
-                                Deposit
-                            </Button>
-                            <Button
-                                size="md"
-                                leftSection={<IconMinus/>}
-                                type="submit"
-                                onClick={() => !isConnected ? open() : setAction('withdraw')}
-                            >
-                                Withdraw
-                            </Button>
+
                         </Group>
                     </Stack>
                 </form>

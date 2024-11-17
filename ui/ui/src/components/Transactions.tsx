@@ -45,6 +45,10 @@ function TransactionsTable() {
         return <Text ta='center'>Unable to fetch your transactions. Please connect to the internet and try again.</Text>
     }
 
+    if (data && !data.length) {
+        return <Text ta='center'>You have no transactions</Text>
+    }
+
     return (
         <Table
             style={{
