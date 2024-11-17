@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <Box component="header" className={styles.header}>
-            <Container size="xl">
+            <Container>
                 <Group justify="space-between">
                     <Anchor component={Link} to="/app" className='dfa'>
                         <img src="logo.png" alt="Logo" width={imageSize * 2} height={imageSize}/>
